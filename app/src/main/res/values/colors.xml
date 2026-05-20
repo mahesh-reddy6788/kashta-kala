@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Cobalt Primary -->
+    <color name="walnut_dark">#2979FF</color> <!-- Bright Ocean Blue -->
+    <color name="walnut_darkest">#0A0B1A</color> <!-- Deep Midnight Cobalt -->
+    <color name="walnut_medium">#FF5E3A</color> <!-- Coral Sunset Orange -->
+    
+    <!-- Brand Secondary (Highlights) -->
+    <color name="amber_highlight">#00BFA5</color> <!-- Neo Mint Green -->
+    <color name="amber_dark">#00E676</color> <!-- Vivid Lime Green -->
+    
+    <!-- Surfaces & Backgrounds (Inspired by the Purrweb mock-up) -->
+    <color name="surface_white">#161943</color> <!-- Premium Royal Cobalt Surface -->
+    <color name="background_cream">#0D0E29</color> <!-- Deep Cobalt Indigo Canvas -->
+    <color name="cream_white">#FFFFFF</color>
+    
+    <!-- Extra Purrweb Gradient Accents -->
+    <color name="purrweb_blue">#2979FF</color>
+    <color name="purrweb_coral">#FF5E3A</color>
+    <color name="purrweb_mint">#00BFA5</color>
+    <color name="purrweb_soft_white">#F5F7FB</color>
+    <color name="purrweb_dark_slate">#0F172A</color>
+    <color name="purrweb_muted_slate">#64748B</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_body">#8F99E3</color>
+    <color name="text_caption">#6571D0</color>
+    <color name="text_disabled">#34396E</color>
+    <color name="text_on_dark">#FFFFFF</color>
+    
+    <!-- Status & Functional -->
+    <color name="error_red">#FF5E3A</color>
+    <color name="status_pending">#FFA000</color>
+    <color name="status_processing">#2979FF</color>
+    <color name="status_shipped">#8F99E3</color>
+    <color name="status_delivered">#00BFA5</color>
+    
+    <!-- Utilities -->
+    <color name="divider_light">#1D215C</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Compatibility Aliases for Older Layouts -->
+    <color name="primaryColor">@color/walnut_dark</color>
+    <color name="primaryLightColor">@color/walnut_medium</color>
+    <color name="primaryDarkColor">@color/walnut_darkest</color>
+    <color name="secondaryColor">@color/amber_highlight</color>
+    <color name="secondaryLightColor">@color/amber_highlight</color>
+    <color name="secondaryDarkColor">@color/amber_dark</color>
+    <color name="backgroundColor">@color/background_cream</color>
+    <color name="primaryTextColor">@color/text_primary</color>
+    <color name="secondaryTextColor">@color/text_body</color>
+    <color name="white">@color/cream_white</color>
+    <color name="black">#FF000000</color>
+</resources>

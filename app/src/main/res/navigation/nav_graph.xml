@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <!-- ── Home ── -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.kashta.kala.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_home_to_onboarding"
+            app:destination="@id/navigation_onboarding"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+        <action android:id="@+id/action_home_to_login"
+            app:destination="@id/navigation_login"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+        <action android:id="@+id/action_home_to_product_detail"
+            app:destination="@id/navigation_product_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- ── Onboarding ── -->
+    <fragment
+        android:id="@+id/navigation_onboarding"
+        android:name="com.kashta.kala.ui.onboarding.OnboardingFragment"
+        android:label="Onboarding"
+        tools:layout="@layout/fragment_onboarding">
+        <action android:id="@+id/action_onboarding_to_login"
+            app:destination="@id/navigation_login"
+            app:popUpTo="@id/navigation_onboarding"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- ── Login ── -->
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.kashta.kala.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action android:id="@+id/action_login_to_register"
+            app:destination="@id/navigation_register"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@+id/action_login_to_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_login"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- ── Register ── -->
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="com.kashta.kala.ui.auth.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action android:id="@+id/action_register_to_login"
+            app:destination="@id/navigation_login"
+            app:popUpTo="@id/navigation_register"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- ── Catalog ── -->
+    <fragment
+        android:id="@+id/navigation_catalog"
+        android:name="com.kashta.kala.ui.catalog.CatalogFragment"
+        android:label="Catalog"
+        tools:layout="@layout/fragment_catalog">
+        <argument android:name="filterCategory"
+            app:argType="string"
+            android:defaultValue="All" />
+        <action android:id="@+id/action_catalog_to_product_detail"
+            app:destination="@id/navigation_product_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- ── Product Detail ── -->
+    <fragment
+        android:id="@+id/navigation_product_detail"
+        android:name="com.kashta.kala.ui.catalog.ProductDetailFragment"
+        android:label="Product Detail"
+        tools:layout="@layout/fragment_product_detail">
+        <argument android:name="productId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action android:id="@+id/action_product_detail_to_estimator"
+            app:destination="@id/navigation_estimator"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- ── Estimator ── -->
+    <fragment
+        android:id="@+id/navigation_estimator"
+        android:name="com.kashta.kala.ui.estimator.EstimatorFragment"
+        android:label="Estimator"
+        tools:layout="@layout/fragment_estimator">
+        <argument android:name="furnitureName"
+            app:argType="string"
+            android:defaultValue="" />
+        <action android:id="@+id/action_estimator_to_quote"
+            app:destination="@id/navigation_quote"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- ── Quote ── -->
+    <fragment
+        android:id="@+id/navigation_quote"
+        android:name="com.kashta.kala.ui.quote.QuoteFragment"
+        android:label="Quote"
+        tools:layout="@layout/fragment_quote">
+        <action android:id="@+id/action_quote_to_saved_quotes"
+            app:destination="@id/navigation_saved_quotes"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- ── Saved Quotes ── -->
+    <fragment
+        android:id="@+id/navigation_saved_quotes"
+        android:name="com.kashta.kala.ui.quote.SavedQuotesFragment"
+        android:label="My Quotes"
+        tools:layout="@layout/fragment_saved_quotes" />
+
+    <!-- ── Orders ── -->
+    <fragment
+        android:id="@+id/navigation_orders"
+        android:name="com.kashta.kala.ui.orders.OrdersFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_orders" />
+
+    <!-- ── Wishlist ── -->
+    <fragment
+        android:id="@+id/navigation_wishlist"
+        android:name="com.kashta.kala.ui.wishlist.WishlistFragment"
+        android:label="Wishlist"
+        tools:layout="@layout/fragment_wishlist" />
+
+    <!-- ── Profile ── -->
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.kashta.kala.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action android:id="@+id/action_profile_to_login"
+            app:destination="@id/navigation_login"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+        <action android:id="@+id/action_profile_to_wishlist"
+            app:destination="@id/navigation_wishlist"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@+id/action_profile_to_orders"
+            app:destination="@id/navigation_orders"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@+id/action_profile_to_saved_quotes"
+            app:destination="@id/navigation_saved_quotes"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- ── Admin ── -->
+    <fragment
+        android:id="@+id/navigation_admin"
+        android:name="com.kashta.kala.ui.admin.AdminFragment"
+        android:label="Admin Dashboard"
+        tools:layout="@layout/fragment_admin">
+        <action android:id="@+id/action_admin_to_add_product"
+            app:destination="@id/navigation_add_product"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@+id/action_admin_to_login"
+            app:destination="@id/navigation_login"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_add_product"
+        android:name="com.kashta.kala.ui.admin.AddProductFragment"
+        android:label="Add Product"
+        tools:layout="@layout/fragment_add_product" />
+
+</navigation>

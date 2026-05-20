@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeColor="#22FFFFFF"
+    app:strokeWidth="1.5dp"
+    app:cardBackgroundColor="@color/surface_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="User Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/cream_white"/>
+
+            <TextView
+                android:id="@+id/tvAdminBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_search_view"
+                android:backgroundTint="@color/secondaryColor"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:text="ADMIN"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="email@example.com"
+            android:textColor="@color/secondaryTextColor"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvUserPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+91 9876543210"
+            android:textColor="@color/secondaryTextColor"
+            android:layout_marginTop="2dp"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

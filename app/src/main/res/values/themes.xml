@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.KashtaKala" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/walnut_dark</item>
+        <item name="colorPrimaryVariant">@color/walnut_medium</item>
+        <item name="colorOnPrimary">@color/cream_white</item>
+        
+        <item name="colorSecondary">@color/amber_highlight</item>
+        <item name="colorSecondaryVariant">@color/amber_dark</item>
+        <item name="colorOnSecondary">@color/walnut_darkest</item>
+        
+        <item name="colorSurface">@color/surface_white</item>
+        <item name="android:colorBackground">@color/background_cream</item>
+        <item name="colorOnBackground">@color/walnut_darkest</item>
+        
+        <item name="android:statusBarColor">@color/walnut_darkest</item>
+        <item name="android:windowBackground">@color/background_cream</item>
+        
+        <!-- Shape Appearances for Material Components -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeSmall</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeMedium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeLarge</item>
+    </style>
+
+    <style name="Theme.KashtaKala.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Kashta Kala Shape System -->
+    <style name="ShapeSmall" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">8dp</item>
+    </style>
+    <style name="ShapeMedium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">12dp</item>
+    </style>
+    <style name="ShapeLarge" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+</resources>
